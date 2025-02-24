@@ -1,4 +1,5 @@
-<!-- index.html - Updated UI/UX --><!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +12,42 @@
         <div class="input-group">
             <input type="text" id="url" placeholder="Enter media URL here">
             <button class="paste-button" onclick="pasteURL()">📋</button>
-        </div><div class="format-group">
-        <button class="format-button" onclick="selectFormat('video')">Video</button>
-        <button class="format-button" onclick="selectFormat('audio')">Audio</button>
+        </div>
+        <img id="thumbnail" src="" alt="Video Preview" style="display: none; max-width: 100%; margin-top: 10px; border-radius: 8px;">
+        <div class="format-group">
+            <button class="format-button" onclick="selectFormat('video')">Video</button>
+            <button class="format-button" onclick="selectFormat('audio')">Audio</button>
+        </div>
+        <div class="resolution-group" id="resolution-group">
+            <label for="resolution">Select Video Resolution:</label>
+            <select id="resolution">
+                <option value="best">Best Quality</option>
+                <option value="1080p">1080p</option>
+                <option value="720p">720p</option>
+                <option value="480p">480p</option>
+                <option value="360p">360p</option>
+            </select>
+        </div>
+        <div class="resolution-group" id="audio-quality-group" style="display: none;">
+            <label for="audio-quality">Select Audio Quality:</label>
+            <select id="audio-quality">
+                <option value="bestaudio">Best Quality</option>
+                <option value="320k">320 kbps</option>
+                <option value="256k">256 kbps</option>
+                <option value="192k">192 kbps</option>
+                <option value="128k">128 kbps</option>
+                <option value="64k">64 kbps</option>
+            </select>
+        </div>
+        <div id="progress-container" style="display: none; width: 100%; background: #ddd;">
+            <div id="progress-bar" style="height: 5px; width: 0%; background: green;"></div>
+        </div>
+        <button class="download-button" onclick="downloadMedia()">Download</button>
+        <div class="download-history">
+            <h2>Download History</h2>
+            <ul id="history-list"></ul>
+        </div>
     </div>
-    
-    <button class="download-button" onclick="downloadMedia()">Download</button>
-    
-    <div class="download-history">
-        <h2>Download History</h2>
-        <ul id="history-list"></ul>
-    </div>
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
