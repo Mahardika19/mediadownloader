@@ -1,0 +1,28 @@
+/* styles.css - Enhanced UI/UX for professional look */
+
+body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; text-align: center; margin: 0; padding: 0; }
+
+.container { max-width: 400px; margin: 50px auto; padding: 20px; background: #1e1e1e; border-radius: 12px; box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); }
+
+h1 { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
+
+.input-group { display: flex; align-items: center; background: #2a2a2a; padding: 8px; border-radius: 8px; margin-bottom: 15px; }
+
+.input-group input { flex: 1; padding: 10px; border: none; background: transparent; color: #fff; font-size: 16px; }
+
+.input-group .paste-button { background: transparent; border: none; cursor: pointer; font-size: 20px; color: #ffffff; margin-left: 8px; }
+
+.format-group { display: flex; justify-content: center; margin-bottom: 15px; }
+
+.format-button { padding: 10px 20px; border: none; background: #3a3a3a; color: #ffffff; border-radius: 8px; margin: 5px; cursor: pointer; transition: 0.3s; }
+
+.format-button:hover { background: #ffffff; color: #121212; }
+
+.download-button { width: 100%; padding: 12px; border: none; background: #ffffff; color: #121212; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+
+.download-button:hover { background: #cccccc; }
+
+.download-history { margin-top: 20px; padding-top: 10px; border-top: 1px solid #444; }
+
+.download-history h2 { font-size: 20px; margin-bottom: 10px; }
+

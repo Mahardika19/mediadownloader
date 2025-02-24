@@ -1,0 +1,30 @@
+<!-- index.html - Updated UI/UX --><!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MEDIA DOWNLOADER</h1>
+        <div class="input-group">
+            <input type="text" id="url" placeholder="Enter media URL here">
+            <button class="paste-button" onclick="pasteURL()">📋</button>
+        </div><div class="format-group">
+        <button class="format-button" onclick="selectFormat('video')">Video</button>
+        <button class="format-button" onclick="selectFormat('audio')">Audio</button>
+    </div>
+    
+    <button class="download-button" onclick="downloadMedia()">Download</button>
+    
+    <div class="download-history">
+        <h2>Download History</h2>
+        <ul id="history-list"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
