@@ -1,28 +1,128 @@
-/* styles.css - Enhanced UI/UX for professional look */
+/* styles.css - Modern & Professional UI */
 
-body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; text-align: center; margin: 0; padding: 0; }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #181818;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-.container { max-width: 400px; margin: 50px auto; padding: 20px; background: #1e1e1e; border-radius: 12px; box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); }
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #242424;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
 
-h1 { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-.input-group { display: flex; align-items: center; background: #2a2a2a; padding: 8px; border-radius: 8px; margin-bottom: 15px; }
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
 
-.input-group input { flex: 1; padding: 10px; border: none; background: transparent; color: #fff; font-size: 16px; }
+.input-group input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+}
 
-.input-group .paste-button { background: transparent; border: none; cursor: pointer; font-size: 20px; color: #ffffff; margin-left: 8px; }
+.input-group .paste-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #ffffff;
+    margin-left: 10px;
+    transition: 0.3s;
+}
 
-.format-group { display: flex; justify-content: center; margin-bottom: 15px; }
+.input-group .paste-button:hover {
+    color: #1db954;
+}
 
-.format-button { padding: 10px 20px; border: none; background: #3a3a3a; color: #ffffff; border-radius: 8px; margin: 5px; cursor: pointer; transition: 0.3s; }
+.format-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
 
-.format-button:hover { background: #ffffff; color: #121212; }
+.format-button {
+    padding: 12px 24px;
+    border: none;
+    background: #3a3a3a;
+    color: #ffffff;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
 
-.download-button { width: 100%; padding: 12px; border: none; background: #ffffff; color: #121212; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+.format-button:hover, .format-button.active {
+    background: #1db954;
+    color: #ffffff;
+}
 
-.download-button:hover { background: #cccccc; }
+.resolution-group {
+    margin-bottom: 15px;
+}
 
-.download-history { margin-top: 20px; padding-top: 10px; border-top: 1px solid #444; }
+.resolution-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
 
-.download-history h2 { font-size: 20px; margin-bottom: 10px; }
+.resolution-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background: #2a2a2a;
+    color: #ffffff;
+}
 
+.download-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #ffffff;
+    color: #black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.download-button:hover {
+    background: #17a74b;
+}
+
+.download-history {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.download-history h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
