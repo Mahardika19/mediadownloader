@@ -1,30 +1,22 @@
-// script.js - Updated Functionality
+let selectedFormat = "video";
 
-function pasteURL() {
-    navigator.clipboard.readText().then(text => {
-        document.getElementById("url").value = text;
-    }).catch(err => {
-        alert("Failed to paste URL");
-    });
+function selectFormat(format) {
+    selectedFormat = format;
+    document.getElementById("resolution-group").style.display = format === "video" ? "block" : "none";
+    document.getElementById("audio-quality-group").style.display = format === "audio" ? "block" : "none";
 }
 
-function downloadMedia() {
+async function downloadMedia() {
     const url = document.getElementById("url").value;
-    const format = document.getElementById("format").value;
+    const quality = selectedFormat === "video" ? document.getElementById("resolution").value : document.getElementById("audio-quality").value;
     
-    if (!url) {
-        alert("Please enter a valid URL");
-        return;
-    }
+    const response = await fetch(`/download?url=${encodeURIComponent(url)}&format=${selectedFormat}&quality=${quality}`);
+    const blob = await response.blob();
     
-    alert(`Downloading ${format} from ${url}`);
-    
-    addToHistory(url, format);
-}
-
-function addToHistory(url, format) {
-    const historyList = document.getElementById("history-list");
-    const listItem = document.createElement("li");
-    listItem.textContent = `${format.toUpperCase()}: ${url}`;
-    historyList.appendChild(listItem);
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `media.${selectedFormat === "video" ? "mp4" : "mp3"}`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 }
